@@ -1,14 +1,21 @@
-public class Insertion_Sort {
-    public int[] sortArray(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            int key = nums[i];
-            int j = i - 1;
-            while (j >= 0 && nums[j] > key) {
-                nums[j + 1] = nums[j];
-                j--;
-            }
-            nums[j + 1] = key;
-        }
-        return nums;
-    }
-}
+'''
+
+
+def insertionSort(arr):
+    n = len(arr)  
+      
+    if n <= 1:
+        return   
+ 
+    for i in range(1, n):  
+        key = arr[i] 
+        j = i-1
+        while j >= 0 and key < arr[j]:  
+            arr[j+1] = arr[j]  
+            j -= 1
+        arr[j+1] = key  
+  
+arr = [12, 11, 13, 5, 6]
+insertionSort(arr)
+print(arr)
+'''
